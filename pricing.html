@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pricing — Elkhoi Home &amp; Property Services</title>
+<meta content="Starting price guide for Elkhoi's cleaning, maintenance, laundry and property management services in Lusaka, Zambia." name="description"/>
+<link href="elkhoi-logo.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>.laundry-routes-section .route-box{background:var(--navy);border-radius:14px;padding:34px;color:var(--white)}
+.route-home{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:1.05rem;margin-bottom:22px}.route-home span:last-child{width:100%;margin-left:20px;color:rgba(255,255,255,.78);font-size:0.95rem}
+.route-dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:0 0 10px}.home-dot{background:var(--teal)}.south{background:#35a853}.southwest{background:#2878d8}.central{background:#7b4fc4}.east{background:#e6c400}.northeast{background:#e53935}
+.route-list{display:grid;grid-template-columns:1fr;gap:13px}.route-day{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.13)}.route-day strong{font-family:var(--font-heading);font-size:0.97rem}.route-day p{margin-top:3px;color:rgba(255,255,255,.8);font-size:0.95rem}
+.route-note{margin-top:18px;color:var(--teal);font-size:0.91rem;font-weight:600}.route-details{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.15)}.route-details>div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:18px}.route-details h3{color:var(--white);font-size:1.05rem;margin-bottom:10px}.route-details p{color:rgba(255,255,255,.82);font-size:0.91rem;margin-top:6px}
+.payment-terms{margin-top:18px;padding:16px 18px;border:1px solid #123B5D!important;border-radius:10px;background:#123B5D!important;color:#fff!important}.payment-terms strong{display:block;color:#fff!important;font-family:var(--font-heading);margin-bottom:8px}.payment-terms p{color:rgba(255,255,255,.88)!important;font-size:0.91rem;margin-top:7px}
+.estimator-disclaimer{font-size:0.83rem;color:rgba(255,255,255,.7);margin-top:5px}@media(max-width:760px){.route-details{grid-template-columns:1fr}.route-home span:last-child{margin-left:0}}
+
+
+  :root{
+    --navy:#0D2A47;
+    --navy-deep:#081A2E;
+    --teal:#F4791E;
+    --teal-deep:#D9650E;
+    --white:#FFFFFF;
+    --grey-light:#F4F6F7;
+    --grey-border:#E3E7E9;
+    --ink:#1D2528;
+    --ink-soft:#5C6A70;
+    --font-heading:'Sora', sans-serif;
+    --font-body:'Inter', sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body); color:var(--ink); background:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;}
+  img{max-width:100%; display:block;}
+  h1,h2,h3{font-family:var(--font-heading); color:var(--navy); font-weight:700; line-height:1.2;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1140px; margin:0 auto; padding:0 24px;}
+  section{padding:70px 0;}
+  .eyebrow{font-family:var(--font-heading); font-size:0.83rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--teal-deep); margin-bottom:14px;}
+  .section-head{max-width:640px; margin:0 auto 40px; text-align:center;}
+  .section-head h2{font-size:clamp(1.65rem,3.2vw,2.25rem); margin-bottom:12px;}
+  .section-head p{color:var(--ink-soft); font-size:1.07rem;}
+  .btn{display:inline-block; font-family:var(--font-heading); font-weight:600; font-size:1rem; padding:14px 28px; border-radius:6px; transition:background .18s, transform .18s;}
+  .btn-primary{background:var(--teal); color:var(--white);}
+  .btn-primary:hover{background:var(--teal-deep); transform:translateY(-1px);}
+  .btn-outline-navy{border:2px solid var(--navy); color:var(--navy); background:none;}
+  .btn-outline-navy:hover{background:var(--navy); color:var(--white);}
+
+  /* ============ HOME (self-contained, matches Index) ============ */
+  .home-hero{background:var(--navy); padding:70px 0; text-align:center;}
+  .home-hero h1{font-size:clamp(2.15rem,5vw,3.45rem); margin-bottom:14px; color:var(--white);}
+  .home-hero h1 .accent{color:var(--teal);}
+  .home-hero .home-tagline{font-family:var(--font-heading); font-weight:600; font-size:1.2rem; color:var(--teal); margin-bottom:28px;}
+  .home-hero-ctas{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+  .home-hero .btn-outline-white{border:2px solid var(--white); color:var(--white); background:none;}
+  .home-hero .btn-outline-white:hover{background:var(--white); color:var(--navy);}
+
+  /* ============ SERVICES (self-contained, matches Index) ============ */
+  .services-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;
+  }
+  .service-card{
+    background:var(--navy); border:1px solid var(--navy); border-radius:12px;
+    padding:32px 28px; transition:box-shadow .2s, transform .2s, border-color .2s;
+    display:flex; flex-direction:column;
+  }
+  .service-card:hover{box-shadow:0 12px 32px rgba(13,42,71,0.25); transform:translateY(-3px); border-color:var(--teal);}
+  .service-icon{
+    width:80px; height:80px; border-radius:18px;
+    background:var(--grey-light); border:1px solid var(--grey-border);
+    display:flex; align-items:center; justify-content:center; margin-bottom:22px;
+    padding:12px;
+  }
+  .service-icon img{width:100%; height:100%; object-fit:contain;}
+  .service-card h3{font-size:1.2rem; margin-bottom:8px; color:var(--white);}
+  .service-card .service-desc{color:rgba(255,255,255,0.75); font-size:0.99rem; margin-bottom:18px;}
+  .service-list{
+    list-style:none; margin-bottom:22px; flex-grow:1;
+  }
+  .service-list li{
+    display:flex; align-items:flex-start; gap:8px;
+    font-size:0.94rem; color:rgba(255,255,255,0.9); padding:5px 0;
+  }
+  .service-list li::before{
+    content:""; width:6px; height:6px; border-radius:50%; background:var(--teal);
+    margin-top:8px; flex-shrink:0;
+  }
+  .service-list-2col{
+    display:grid; grid-template-columns:1fr 1fr; column-gap:12px; row-gap:0;
+  }
+  .service-card .btn-outline-navy{border-color:var(--white); color:var(--white);}
+  .service-card .btn-outline-navy:hover{background:var(--white); color:var(--navy);}
+  .service-card .btn{font-size:0.9rem; padding:10px 18px; align-self:flex-start;}
+
+  .btn-whatsapp{background:#25D366; color:var(--white); display:inline-flex; align-items:center; gap:9px;}
+  .btn-whatsapp:hover{background:#1FA855; transform:translateY(-1px);}
+  .btn-whatsapp svg{width:18px; height:18px; fill:currentColor;}
+
+  /* Header */
+  header{position:sticky; top:0; z-index:100; background:var(--white); border-bottom:1px solid var(--grey-border);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:1140px; margin:0 auto;}
+  .nav-logo-img{height:42px; width:auto;}
+  .nav-links{display:flex; align-items:center; gap:32px; list-style:none;}
+  .nav-links a{color:var(--ink); font-weight:500; font-size:1rem;}
+  .nav-links a:hover{color:var(--teal-deep);}
+  .nav-links a.active{color:var(--teal-deep); font-weight:600;}
+
+  /* Hero / disclaimer band */
+  .pricing-hero{background:var(--navy); padding:60px 0 40px; text-align:center;}
+  .pricing-hero h1{font-size:clamp(2.05rem,4.5vw,3.05rem); margin-bottom:14px; color:var(--white);}
+  .pricing-hero h1 .accent{color:var(--teal);}
+  .pricing-hero > .wrap > p{color:rgba(255,255,255,0.78) !important;}
+  .disclaimer-note{
+    max-width:620px; margin:20px auto 0; background:var(--white);
+    border:1px solid var(--grey-border); border-radius:10px; padding:16px 20px;
+    font-size:0.97rem; color:var(--ink-soft);
+  }
+  .disclaimer-note strong{color:var(--navy);}
+
+  /* How it works */
+  .steps-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:32px;}
+  .step{text-align:center;}
+  .step-num{width:44px; height:44px; border-radius:50%; background:var(--navy); color:var(--white); font-family:var(--font-heading); font-weight:700; font-size:1.1rem; display:flex; align-items:center; justify-content:center; margin:0 auto 18px;}
+  .step h3{font-size:1.1rem; margin-bottom:8px;}
+  .step p{color:var(--ink-soft); font-size:0.97rem;}
+
+  /* Price tables */
+  .price-section-dark{background:var(--navy);}
+  .price-section-dark .section-head h2{color:var(--white);}
+  .price-section-dark .section-head p{color:rgba(255,255,255,0.75);}
+  .price-category{margin-bottom:28px; background:var(--white); border-radius:12px; padding:28px; box-shadow:0 10px 30px rgba(0,0,0,0.18);}
+  .price-category h3{font-size:1.3rem; margin-bottom:16px; padding-bottom:10px; border-bottom:2px solid var(--teal);}
+  table.price-table{width:100%; border-collapse:collapse; font-size:1rem;}
+  table.price-table th{
+    background:var(--navy); color:var(--white); text-align:left;
+    padding:12px 16px; font-family:var(--font-heading); font-weight:600; font-size:0.9rem;
+  }
+  table.price-table th:last-child, table.price-table td:last-child{text-align:right;}
+  table.price-table td{padding:12px 16px; border-bottom:1px solid var(--grey-border);}
+  table.price-table tr:nth-child(even){background:var(--grey-light);}
+  .price-value{color:#F4791E !important; font-weight:700;}
+
+  /* Condition multipliers */
+  .multiplier-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:16px;}
+  .multiplier-card{
+    background:var(--grey-light); border:1px solid var(--grey-border); border-radius:10px;
+    padding:20px; text-align:center;
+  }
+  .multiplier-card .mult{font-family:var(--font-heading); font-weight:700; font-size:1.65rem; color:var(--teal-deep);}
+  .multiplier-card .label{font-weight:600; font-size:0.97rem; margin:6px 0 2px;}
+  .multiplier-card .sub{font-size:0.87rem; color:var(--ink-soft);}
+
+  /* Extra factors note */
+  .factors-note{
+    background:#FFF8F0; border:1px solid #F4D9BC; border-radius:10px; padding:22px 24px; margin-top:32px;
+  }
+  .factors-note h4{font-family:var(--font-heading); font-weight:700; font-size:1.05rem; color:var(--navy); margin-bottom:10px;}
+  .factors-note ul{margin:0; padding-left:20px; color:var(--ink-soft); font-size:0.97rem;}
+  .factors-note li{margin-bottom:4px;}
+
+  /* CTA band */
+  .cta-band{background:var(--navy); color:var(--white); text-align:center;}
+  .cta-band h2{color:var(--white);}
+  .cta-band p{color:rgba(255,255,255,0.75); max-width:520px; margin:0 auto 28px;}
+  .cta-row{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+
+  /* Get a Quote section (matches WeWash's Contact page layout) */
+  .quote-section{background:var(--navy);}
+  .quote-section .section-head{text-align:left; margin:0 0 36px; max-width:none;}
+  .quote-section .eyebrow{color:var(--teal);}
+  .quote-section h2{color:var(--white);}
+  .quote-section > .wrap > p{color:rgba(255,255,255,0.7); max-width:560px; margin-top:-24px; margin-bottom:36px;}
+  .quote-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:48px;}
+  .quote-form{background:var(--white); border-radius:12px; padding:32px;}
+  .quote-form h3{font-size:1.25rem; margin-bottom:20px;}
+  .quote-form .form-group{margin-bottom:16px; display:flex; flex-direction:column; gap:6px;}
+  .quote-form label{font-size:0.9rem; font-weight:500; color:var(--ink-soft);}
+  .quote-form input, .quote-form textarea, .quote-form select{
+    padding:12px 14px; border:1px solid var(--grey-border); border-radius:6px;
+    font-family:var(--font-body); font-size:1rem; color:var(--ink);
+  }
+  .quote-form textarea{resize:vertical; min-height:100px;}
+  .quote-form .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .quote-info h3{color:var(--white); font-size:1.25rem; margin-bottom:20px;}
+  .quote-info-card{
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12);
+    border-radius:10px; padding:16px 18px; margin-bottom:14px;
+    display:flex; align-items:flex-start; gap:14px;
+  }
+  .quote-info-card .icon{
+    width:38px; height:38px; border-radius:8px; background:var(--teal);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .quote-info-card .icon svg{width:19px; height:19px; fill:var(--white);}
+  .quote-info-card .label{font-size:0.83rem; color:rgba(255,255,255,0.55); margin-bottom:2px;}
+  .quote-info-card .value{color:var(--white); font-weight:600; font-size:1rem;}
+  .quote-info-card a.value{text-decoration:none;}
+
+  @media (max-width:800px){
+    .quote-grid{grid-template-columns:1fr;}
+    .quote-form .form-row{grid-template-columns:1fr;}
+  }
+
+  /* Footer (matches main site) */
+  footer{background:var(--navy-deep); color:rgba(255,255,255,0.8); padding:40px 0 24px; text-align:center; font-size:0.9rem;}
+  footer a{color:rgba(255,255,255,0.8);}
+  footer a:hover{color:var(--teal);}
+
+  @media (max-width:640px){
+    .maintenance-price-grid{grid-template-columns:1fr;} 
+    table.price-table{font-size:0.9rem;}
+    table.price-table th, table.price-table td{padding:10px 10px;}
+    .nav-links{display:none;}
+  }
+
+  .price-notice{background:var(--grey-light); border:1px solid var(--grey-border); border-left:4px solid var(--teal); border-radius:10px; padding:20px 22px; margin-bottom:34px;}
+  .price-notice strong{font-family:var(--font-heading); color:var(--navy);}
+  .price-notice p{color:var(--ink-soft); margin-top:6px; font-size:0.98rem;}
+  .pricing-grid{display:grid; grid-template-columns:minmax(0,760px); justify-content:center; gap:24px;}
+  .price-note{color:var(--ink-soft); font-size:0.93rem; margin-top:14px;}
+  .category-intro{color:var(--ink-soft); margin-bottom:16px;}
+  .maintenance-price-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0;}
+  .maintenance-price-grid>div{border:1px solid var(--grey-border);border-radius:9px;padding:14px;background:var(--grey-light);}
+  .maintenance-price-grid h4{font-family:var(--font-heading);font-size:0.93rem;color:var(--navy);margin-bottom:5px;}
+  .maintenance-price-grid p{font-size:0.83rem;color:var(--ink-soft);line-height:1.5;}
+  .quote-only{border:1px dashed var(--grey-border); border-radius:8px; padding:15px; color:var(--navy); background:var(--grey-light); font-weight:600;}
+  .addons-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px 28px; max-width:760px; margin:0 auto;}
+  .addons-grid div{padding:12px 14px; background:var(--white); border:1px solid var(--grey-border); border-radius:8px;}
+  .addon-cta{text-align:center; margin-top:20px; color:var(--ink-soft); font-weight:500;}
+  .addon-cta a{color:var(--teal-deep); font-weight:700;}
+  @media(max-width:760px){.pricing-grid{grid-template-columns:1fr;}.addons-grid{grid-template-columns:1fr;}}
+
+  /* Pricing page visual refinement — existing Elkhoi palette only */
+  .page-hero{
+    background:linear-gradient(145deg,var(--navy) 0%,var(--navy-deep) 100%);
+    padding:68px 0 54px; text-align:center; position:relative; overflow:hidden;
+  }
+  .page-hero::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:var(--teal); opacity:.9;}
+  .page-hero h1{font-size:clamp(2.05rem,4.5vw,3.05rem); margin-bottom:14px; color:var(--white);}
+  .page-hero h1 .accent{color:var(--teal);}
+  .page-hero > .wrap > p:not(.eyebrow){color:rgba(255,255,255,.82); max-width:620px; margin:0 auto;}
+  .pricing-hero-note{max-width:620px; margin:22px auto 0; background:rgba(255,255,255,.97); border:1px solid rgba(255,255,255,.55); border-radius:10px; padding:16px 20px; text-align:left; font-size:0.95rem; color:var(--ink-soft); box-shadow:0 10px 26px rgba(0,0,0,.16);}
+  .pricing-hero-note strong{color:var(--navy);}
+  .pricing-details-section{background:var(--grey-light);}
+  .pricing-details-section .price-category{border-top:3px solid rgba(13,42,71,.14);}
+  .pricing-details-section .featured-price{border-top-color:var(--teal);}
+  .transport-section{background:var(--white); border-top:1px solid var(--grey-border);}
+  .condition-section{background:var(--grey-light);}
+  .narrow-wrap{max-width:920px;}
+  .factors-note{background:#FFF8F0; border:1px solid #F4D9BC; border-left:4px solid var(--teal); border-radius:10px; padding:22px 24px; margin-top:32px;}
+  .factors-note h4{font-family:var(--font-heading); font-weight:700; font-size:1.05rem; color:var(--navy); margin-bottom:10px;}
+  .factors-note p{color:var(--ink-soft); font-size:0.95rem; margin-bottom:10px;}
+  .factors-note ul{margin:0; padding-left:20px; color:var(--ink-soft); font-size:0.95rem;}
+  .factors-note li{margin-bottom:4px;}
+  .factors-note .factors-cta{color:var(--teal-deep); font-weight:600; margin-top:12px; margin-bottom:0;}
+  .condition-section .section-head p,.transport-section .section-head p{max-width:650px; margin-left:auto; margin-right:auto;}
+  @media(max-width:760px){
+    .page-hero{padding:54px 0 42px;}
+    .pricing-hero-note{font-size:0.91rem;}
+  }
+
+/* CLASSIC ELKHOI VISUAL REFRESH */
+:root{--navy:#123B5D;--navy-deep:#08243B;--teal:#E87822;--teal-deep:#C95D0E;--cream:#FBF8F3;--sage:#EAF1EE;--gold:#C79A52;--ink:#24313A;--ink-soft:#66737A;--white:#fff;--grey-light:#F4F6F5;--grey-border:#DCE3E1;}
+body{background:var(--cream);}
+header{background:rgba(255,255,255,.98);border-bottom:1px solid #E7E0D6;box-shadow:0 4px 18px rgba(8,36,59,.06);}
+.top-contact-bar{background:var(--navy-deep);}
+.page-hero{background:linear-gradient(120deg,#08243B,#123B5D)!important;position:relative;overflow:hidden;}
+.page-hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,var(--teal),var(--gold),var(--teal));}
+.page-hero h1{letter-spacing:-.04em;}
+section{border-top:1px solid rgba(18,59,93,.06);}
+.section-head .eyebrow,.eyebrow{color:var(--teal);font-weight:700;letter-spacing:.16em;text-transform:uppercase;}
+.price-category{background:var(--white)!important;border:1px solid #E4DDD3!important;border-radius:18px!important;box-shadow:0 12px 30px rgba(18,59,93,.07)!important;overflow:hidden;}
+.price-category h3{background:linear-gradient(90deg,#F8F0E8,#FBF8F3);border-left:5px solid var(--teal);padding:14px 18px;margin:-1px -1px 18px;}
+.featured-price{border-top:4px solid var(--teal)!important;}
+.price-table th{background:var(--navy)!important;color:#fff!important;}
+.price-table tr:nth-child(even) td{background:#F7F9F8;}
+.price-value{color:#F4791E!important;font-weight:700;}
+.maintenance-price-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px!important;margin:18px 0!important;}
+.maintenance-price-grid>div{background:#F8FAF9;border:1px solid #DEE7E3;border-radius:12px;padding:17px!important;}
+.maintenance-price-grid h4{color:var(--navy);margin-bottom:8px;}
+.maintenance-price-grid ul{margin:0;padding-left:20px;}
+.maintenance-price-grid li{margin:4px 0;color:var(--ink-soft);}
+.multiplier-card{background:#fff!important;border:1px solid #DCE3E1!important;box-shadow:0 8px 20px rgba(18,59,93,.06);}
+.multiplier-card .mult{color:var(--teal-deep)!important;}
+.addons-grid>div{background:#fff!important;border:1px solid #E4DDD3!important;border-radius:10px!important;box-shadow:0 5px 15px rgba(18,59,93,.04);}
+.transport-section{background:var(--sage)!important;}
+.quote-section{background:linear-gradient(120deg,#08243B,#123B5D)!important;}
+footer{background:#061A2A;}
+@media(max-width:760px){.maintenance-price-grid{grid-template-columns:1fr!important}}
+
+  /* Elkhoi pricing: every displayed price is orange. */
+  .pricing-details-section .price-table td.price-value,
+  .pricing-details-section .price-table td.price-value * {
+    color: var(--teal) !important;
+    font-weight: 700 !important;
+  }
+
+/* All pricing amounts use Elkhoi orange */
+.price-value,.featured-price .amount,.price,.starting-price{color:#F4791E !important;}
+''
+/* CLEANING PRICING READABILITY FIX */
+.pricing-details-section .price-category{height:auto!important;min-height:0!important;overflow:visible!important;}
+.pricing-details-section .price-category h3{line-height:1.3;overflow:visible;}
+.pricing-details-section .price-note,.pricing-details-section .category-intro,.pricing-details-section .payment-terms,.pricing-details-section .payment-terms p{overflow:visible;line-height:1.6;}
+.pricing-details-section table.price-table{table-layout:fixed;}
+.pricing-details-section table.price-table th:first-child,.pricing-details-section table.price-table td:first-child{width:64%;}
+.pricing-details-section table.price-table th:last-child,.pricing-details-section table.price-table td:last-child{width:36%;}
+@media(max-width:640px){.pricing-details-section .price-category{padding:20px!important;} .pricing-details-section table.price-table th,.pricing-details-section table.price-table td{padding:11px 9px;font-size:0.89rem;overflow-wrap:anywhere;word-break:normal;} .pricing-details-section .price-note,.pricing-details-section .category-intro,.pricing-details-section .payment-terms p{font-size:0.91rem;line-height:1.65;} .pricing-details-section .payment-terms{padding:14px 15px;}}
+<style id="maintenance-level-pricing">
+.maintenance-levels{display:grid;grid-template-columns:1fr;gap:16px;margin:18px 0;}
+.maintenance-level{border:1px solid #DEE7E3;border-radius:12px;padding:18px;background:#F8FAF9;}
+.maintenance-level-title{font-family:var(--font-heading);color:var(--navy);font-size:1.05rem;font-weight:800;margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid rgba(232,120,34,.35);}
+.maintenance-service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px;}
+.maintenance-service-item{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:9px 0;border-bottom:1px solid #E4EBE8;color:var(--ink-soft);font-size:0.91rem;line-height:1.4;}
+.maintenance-service-item:last-child{border-bottom:0;}
+.maintenance-service-price{color:#F4791E;font-weight:700;white-space:nowrap;text-align:right;}
+.maintenance-subgroups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+.maintenance-subgroup{background:#fff;border:1px solid #E4EBE8;border-radius:10px;padding:14px;}
+.maintenance-subgroup h5{font-family:var(--font-heading);color:var(--navy);font-size:0.93rem;margin:0 0 8px;}
+.maintenance-pricing-note{margin-top:16px;padding:16px 18px;border-left:4px solid var(--teal);border-radius:10px;background:#FFF8F0;color:var(--ink-soft);font-size:0.93rem;line-height:1.6;}
+@media(max-width:760px){.maintenance-service-grid,.maintenance-subgroups{grid-template-columns:1fr;}.maintenance-service-item{align-items:flex-start;}.maintenance-service-price{white-space:normal;}}
+</style>
+</style>
+
+<style id="elkhoi-final-payment-correction">
+/* FINAL ELKHOI CLEANING PAYMENT TERMS CORRECTION */
+.payment-terms { background:#123B5D !important; border:1px solid #123B5D !important; color:#FFFFFF !important; }
+.payment-terms strong { color:#FFFFFF !important; }
+.payment-terms p { color:rgba(255,255,255,.9) !important; }
+</style>
+
+<style id="elkhoi-final-cleaning-readability">
+/* FINAL CLEANING PRICING READABILITY CORRECTION */
+.pricing-details-section .price-category { overflow:visible !important; height:auto !important; min-height:0 !important; }
+.pricing-details-section .price-category table.price-table { width:100% !important; table-layout:fixed !important; }
+.pricing-details-section .price-category table.price-table th,
+.pricing-details-section .price-category table.price-table td { overflow:visible !important; white-space:normal !important; word-break:normal !important; overflow-wrap:anywhere !important; vertical-align:top !important; line-height:1.45 !important; }
+.pricing-details-section .price-category .payment-terms { overflow:visible !important; height:auto !important; min-height:0 !important; }
+
+/* Fix three-column Additional Cleaning Services table: keep all three columns readable. */
+.pricing-details-section table.price-table.three-col-table { table-layout: fixed !important; width: 100% !important; }
+.pricing-details-section table.price-table.three-col-table th:nth-child(1),
+.pricing-details-section table.price-table.three-col-table td:nth-child(1) { width: 42% !important; }
+.pricing-details-section table.price-table.three-col-table th:nth-child(2),
+.pricing-details-section table.price-table.three-col-table td:nth-child(2) { width: 29% !important; text-align: left !important; }
+.pricing-details-section table.price-table.three-col-table th:nth-child(3),
+.pricing-details-section table.price-table.three-col-table td:nth-child(3) { width: 29% !important; text-align: right !important; }
+</style>
+
+<style id="elkhoi-typography-normalization">
+/* Elkhoi typography normalization: keeps the existing visual hierarchy while making equivalent text consistent. */
+html { font-size: 16px; }
+body { font-size: 1.05rem; }
+.nav-links a { font-size: 1rem !important; }
+.section-head p { font-size: 1.05rem !important; }
+.step p, .why-item p, .why-card p, .business p { font-size: 1rem !important; }
+.service-card p { font-size: 1rem !important; }
+.form-group label, .quote-form label, label { font-size: 0.9rem !important; }
+.form-group input, .form-group select, .form-group textarea, .quote-form input, .quote-form select, .quote-form textarea { font-size: 1rem !important; }
+footer { font-size: 0.9rem !important; }
+@media (max-width: 640px) {
+  html { font-size: 16px; }
+  .section-head p { font-size: 1.05rem !important; }
+  .step p, .why-item p, .why-card p, .business p, .service-card p { font-size: 1rem !important; }
+}
+</style>
+
+<style id="elkhoi-mobile-uniform-typography">
+@media (max-width: 640px) {
+  html { font-size: 16px !important; }
+  body,
+  body p,
+  body li,
+  body td,
+  body th,
+  body label,
+  body input,
+  body textarea,
+  body select,
+  body button,
+  body .form-group,
+  body .form-note,
+  body .note,
+  body .small,
+  body .description,
+  body .card-text,
+  body .service-description,
+  body .service-card p,
+  body .contact-info p,
+  body .policy-content p,
+  body .policy-content li {
+    font-size: 0.9rem !important;
+  }
+}
+</style>
+
+</head>
+<body>
+<header>
+<div class="nav">
+<a href="home.html">
+<img alt="Elkhoi Home &amp; Property Services" class="nav-logo-img" src="elkhoi-logo.png"/>
+</a>
+<ul class="nav-links">
+<li><a href="home.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="laundry.html">Laundry</a></li><li><a href="pricing.html">Pricing</a></li>
+
+<li><a href="get-quote.html">Get Quote</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<a class="btn btn-primary" href="get-quote.html">Get Quote</a>
+</div>
+</header>
+<!-- Standalone detailed pricing website. This site is intentionally separate from the main Elkhoi website. -->
+<!-- ============ HOME SECTION (self-contained — does not link to Index) ============ -->
+<section class="page-hero">
+<div class="wrap">
+<p class="eyebrow" style="text-align:center; color:var(--teal);">Pricing</p>
+<h1>Starting Price <span class="accent">Guide</span></h1>
+<p>Every price below is a starting estimate. We confirm your final price based on the actual scope of work and requirements.</p>
+<div class="pricing-hero-note">
+<strong>How pricing works:</strong> Tell us about the job when you book. We give you a starting estimate based on what you describe. Before the service begins, we confirm the actual condition and scope with you. If the job requires an adjustment, we explain it and get your approval first.
+    </div>
+</div>
+</section>
+<section class="pricing-details-section">
+<div class="wrap">
+<div class="price-notice">
+<strong>Important pricing note</strong>
+<p>Starting prices are indicative. Final pricing is confirmed based on the actual scope of work, property condition, location, labour, materials, transport and any additional requirements.</p>
+<p>For maintenance and specialised services, materials, replacement parts, specialised equipment and additional labour may be charged separately where applicable.</p>
+</div>
+<div class="pricing-grid">
+<div class="price-category featured-price">
+<h3>General Cleaning</h3>
+<table class="price-table">
+<tr><th>Property</th><th>Starting price</th></tr>
+<tr><td>1 Bedroom</td><td class="price-value">From K500</td></tr>
+<tr><td>2 Bedroom</td><td class="price-value">From K650</td></tr>
+<tr><td>3 Bedroom</td><td class="price-value">From K850</td></tr>
+<tr><td>4 Bedroom</td><td class="price-value">From K1,100</td></tr>
+</table>
+<p class="price-note">General cleaning prices are starting prices only.</p><div class="payment-terms">
+<strong>Cleaning Payment Terms</strong>
+<p>Once our cleaning team arrives and confirms the agreed scope of work, 50% of the agreed service fee is payable before cleaning begins. The remaining 50% is payable immediately upon completion of the agreed cleaning service.</p>
+<p>If the actual property differs materially from what was described, any price adjustment must be agreed with the customer before additional work begins.</p>
+</div>
+<p class="price-note">Final pricing may vary because of property condition, location, number of bathrooms, additional rooms/areas, heavy dirt, heavy grease, heavy mould, excessive rubbish/debris and additional requested services.</p>
+</div>
+<div class="price-category featured-price">
+<h3>Deep Cleaning</h3>
+<table class="price-table">
+<tr><th>Property</th><th>Starting price</th></tr>
+<tr><td>1 Bedroom</td><td class="price-value">From K800</td></tr>
+<tr><td>2 Bedroom</td><td class="price-value">From K1,100</td></tr>
+<tr><td>3 Bedroom</td><td class="price-value">From K1,700</td></tr>
+<tr><td>4 Bedroom</td><td class="price-value">From K2,500</td></tr>
+</table>
+<p class="price-note">Deep cleaning is more intensive than general cleaning and requires additional time and labour. Final pricing depends on the actual condition and scope.</p>
+</div>
+<div class="price-category">
+<h3>Additional Cleaning Services</h3>
+<p class="category-intro">These services are available as add-ons to a cleaning booking.</p>
+<table class="price-table three-col-table">
+<tr><th>Service</th><th>Standard</th><th>Heavy / Extra</th></tr>
+<tr><td>Oven Cleaning</td><td class="price-value">From K250</td><td class="price-value">From K350</td></tr>
+<tr><td>Interior Window Cleaning</td><td class="price-value">From K150</td><td class="price-value">From K250</td></tr>
+<tr><td>Upholstery Cleaning</td><td class="price-value">From K150/seat</td><td class="price-value">From K250/seat</td></tr>
+<tr><td>Extra Bathroom</td><td class="price-value">From K200</td><td class="price-value">From K300</td></tr>
+<tr><td>Heavy Mould Treatment</td><td class="price-value">From K250</td><td class="price-value">From K400</td></tr>
+<tr><td>Refrigerator Cleaning</td><td class="price-value">From K150</td><td class="price-value">From K300</td></tr>
+<tr><td>Mattress Cleaning — Single</td><td class="price-value">From K250</td><td class="price-value">From K350</td></tr>
+<tr><td>Carpet Cleaning</td><td class="price-value">From K200</td><td class="price-value">From K300</td></tr>
+<tr><td>Heavy Grease/Degreasing</td><td class="price-value">From K300</td><td class="price-value">From K400</td></tr>
+<tr><td>Excessive Rubbish/Debris</td><td class="price-value">From K300</td><td class="price-value">From K400</td></tr>
+</table>
+<p class="price-note">Prices are based on standard conditions. Heavy/extra charges apply depending on size, condition, quantity and level of work required. Final price will be confirmed before service.</p>
+</div>
+<div class="price-category">
+<h3>Post-Construction Cleaning</h3>
+<table class="price-table">
+<tr><th>Property</th><th>Starting price</th></tr>
+<tr><td>1 Bedroom</td><td class="price-value">From K1,400</td></tr>
+<tr><td>2 Bedroom</td><td class="price-value">From K2,000</td></tr>
+<tr><td>3 Bedroom</td><td class="price-value">From K3,000</td></tr>
+<tr><td>4 Bedroom</td><td class="price-value">From K4,000</td></tr>
+</table>
+<p class="price-note">For residential apartments, homes and offices at this stage. No warehouses at this stage. Final pricing depends on condition, size, amount of debris/rubbish and exact scope of work.</p>
+</div>
+<div class="price-category">
+<h3>Move-In / Move-Out Cleaning</h3>
+<table class="price-table">
+<tr><th>Property</th><th>Starting price</th></tr>
+<tr><td>1 Bedroom</td><td class="price-value">From K1,400</td></tr>
+<tr><td>2 Bedroom</td><td class="price-value">From K2,000</td></tr>
+<tr><td>3 Bedroom</td><td class="price-value">From K3,000</td></tr>
+<tr><td>4 Bedroom</td><td class="price-value">From K4,000</td></tr>
+</table>
+<p class="price-note">Move-in / move-out cleaning follows a more detailed cleaning process. Final pricing depends on condition, size and exact scope of work.</p>
+</div>
+<div class="price-category">
+<h3>Recurring Cleaning</h3>
+<p class="category-intro">For customers on a standing cleaning schedule rather than a one-off visit.</p>
+<table class="price-table">
+<tr><th>Service</th><th>Starting price</th></tr>
+<tr><td>Weekly — 1 Bedroom</td><td class="price-value">From K600/visit</td></tr>
+<tr><td>Weekly — 2 Bedroom</td><td class="price-value">From K800/visit</td></tr>
+<tr><td>Weekly — 3 Bedroom</td><td class="price-value">From K1,000/visit</td></tr>
+<tr><td>Weekly — 4 Bedroom</td><td class="price-value">From K1,400/visit</td></tr>
+<tr><td>Biweekly — 1 Bedroom</td><td class="price-value">From K625/visit</td></tr>
+<tr><td>Biweekly — 2 Bedroom</td><td class="price-value">From K825/visit</td></tr>
+<tr><td>Biweekly — 3 Bedroom</td><td class="price-value">From K1,025/visit</td></tr>
+<tr><td>Biweekly — 4 Bedroom</td><td class="price-value">From K1,450/visit</td></tr>
+<tr><td>Monthly — 1 Bedroom</td><td class="price-value">From K650/visit</td></tr>
+<tr><td>Monthly — 2 Bedroom</td><td class="price-value">From K850/visit</td></tr>
+<tr><td>Monthly — 3 Bedroom</td><td class="price-value">From K1,050/visit</td></tr>
+<tr><td>Monthly — 4 Bedroom</td><td class="price-value">From K1,500/visit</td></tr>
+</table>
+</div>
+<div class="price-category">
+<h3>Office Cleaning</h3>
+<table class="price-table"><tr><th>Service</th><th>Starting price</th></tr><tr><td>Office cleaning — Daily</td><td class="price-value">From K200/day</td></tr><tr><td>Office cleaning — Weekly</td><td class="price-value">From K750/week</td></tr><tr><td>Office cleaning — Monthly</td><td class="price-value">From K2,800/month</td></tr></table>
+<p class="price-note">Office cleaning may vary depending on office size, number of rooms, bathrooms, cleaning frequency, number of workers, cleaning requirements, supplies and location/transport. Weekly and monthly figures are starting guides; final pricing is confirmed for the actual office and cleaning schedule.</p>
+</div>
+<div class="price-category featured-price">
+<h3>Laundry</h3>
+<table class="price-table">
+<tr><th>Service</th><th>Starting price</th></tr>
+<tr><td>Wash Only</td><td class="price-value">From K30/kg</td></tr>
+<tr><td>Wash, Dry &amp; Fold</td><td class="price-value">From K40/kg</td></tr>
+<tr><td>Wash, Dry, Fold &amp; Iron</td><td class="price-value">From K50/kg</td></tr>
+<tr><td>Ironing Only</td><td class="price-value">From K20/kg</td></tr>
+<tr><td>Blankets</td><td class="price-value">From K70</td></tr>
+<tr><td>Duvets</td><td class="price-value">From K120</td></tr>
+<tr><td>Curtains</td><td class="price-value">From K150</td></tr>
+<tr><td>Suits</td><td class="price-value">From K65</td></tr>
+<tr><td>Shirts</td><td class="price-value">From K25</td></tr>
+<tr><td>Trousers</td><td class="price-value">From K30</td></tr>
+<tr><td>Express / Same-day service</td><td class="price-value">+50%</td></tr>
+</table>
+<p class="price-note"><strong>Pickup &amp; delivery:</strong> pricing depends on service area, distance, order size and location. Laundry may be fulfilled directly by Elkhoi or through an appropriate laundry partner while the business grows.</p>
+</div>
+<div class="price-category featured-price">
+<h3>Elkhoi Maintenance</h3>
+<p class="category-intro">Maintenance and technical services for homes, offices and properties. Starting prices are shown below where applicable; larger or specialised works are quoted after assessment.</p>
+<div class="maintenance-levels">
+<div class="maintenance-level">
+<h4 class="maintenance-level-title">LEVEL 1 — MINOR MAINTENANCE</h4>
+<div class="maintenance-service-grid">
+<div class="maintenance-service-item"><span>Minor Plumbing Repairs</span><span class="maintenance-service-price">From K275</span></div>
+<div class="maintenance-service-item"><span>Plumbing Call-out / Assessment</span><span class="maintenance-service-price">From K350</span></div>
+<div class="maintenance-service-item"><span>Minor Electrical Repairs</span><span class="maintenance-service-price">From K300</span></div>
+<div class="maintenance-service-item"><span>Minor Carpentry Repairs</span><span class="maintenance-service-price">From K350</span></div>
+<div class="maintenance-service-item"><span>Minor General Repairs</span><span class="maintenance-service-price">From K250</span></div>
+<div class="maintenance-service-item"><span>Lighting Installation</span><span class="maintenance-service-price">From K250/point</span></div>
+<div class="maintenance-service-item"><span>Leak Detection &amp; Repair</span><span class="maintenance-service-price">From K500</span></div>
+<div class="maintenance-service-item"><span>Water Heater / Geyser Repair &amp; Service</span><span class="maintenance-service-price">From K750</span></div>
+</div>
+</div>
+
+<div class="maintenance-level">
+<h4 class="maintenance-level-title">LEVEL 2 — STANDARD TECHNICAL SERVICES</h4>
+<div class="maintenance-subgroups">
+<div class="maintenance-subgroup">
+<h5>AC &amp; REFRIGERATION</h5>
+<div class="maintenance-service-grid">
+<div class="maintenance-service-item"><span>Assessment / Diagnostic</span><span class="maintenance-service-price">K350</span></div>
+<div class="maintenance-service-item"><span>Domestic AC Servicing</span><span class="maintenance-service-price">K1,000/unit</span></div>
+<div class="maintenance-service-item"><span>Domestic AC Installation</span><span class="maintenance-service-price">K2,000/unit</span></div>
+<div class="maintenance-service-item"><span>Commercial AC Servicing</span><span class="maintenance-service-price">K1,500/unit</span></div>
+<div class="maintenance-service-item"><span>Commercial AC Installation</span><span class="maintenance-service-price">K3,200/unit</span></div>
+<div class="maintenance-service-item"><span>Cold Room Servicing</span><span class="maintenance-service-price">K1,250</span></div>
+<div class="maintenance-service-item"><span>Cold Room Repair</span><span class="maintenance-service-price">K3,200</span></div>
+<div class="maintenance-service-item"><span>Double-Door Fridge Repair</span><span class="maintenance-service-price">K1,250</span></div>
+<div class="maintenance-service-item"><span>Upright Fridge Repair</span><span class="maintenance-service-price">K900</span></div>
+<div class="maintenance-service-item"><span>Deep Freezer Repair</span><span class="maintenance-service-price">K900</span></div>
+</div>
+</div>
+<div class="maintenance-subgroup">
+<h5>ELECTRICAL &amp; SOLAR MAINTENANCE</h5>
+<div class="maintenance-service-grid">
+<div class="maintenance-service-item"><span>Electrical Fault Assessment</span><span class="maintenance-service-price">From K400</span></div>
+<div class="maintenance-service-item"><span>Electrical Safety Testing</span><span class="maintenance-service-price">From K1,800</span></div>
+<div class="maintenance-service-item"><span>Solar Maintenance — 3kW</span><span class="maintenance-service-price">From K650</span></div>
+<div class="maintenance-service-item"><span>Solar Maintenance — 5kW</span><span class="maintenance-service-price">From K900</span></div>
+<div class="maintenance-service-item"><span>Solar Maintenance — 8–10kW</span><span class="maintenance-service-price">From K1,250</span></div>
+<div class="maintenance-service-item"><span>Solar Maintenance — 12–16kW</span><span class="maintenance-service-price">From K1,800</span></div>
+<div class="maintenance-service-item"><span>Solar Panel Cleaning</span><span class="maintenance-service-price">From K150/panel</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="maintenance-level">
+<h4 class="maintenance-level-title">LEVEL 3 — INSTALLATIONS &amp; SECURITY SYSTEMS</h4>
+<div class="maintenance-subgroups">
+<div class="maintenance-subgroup">
+<h5>SECURITY &amp; ACCESS</h5>
+<div class="maintenance-service-grid">
+<div class="maintenance-service-item"><span>CCTV Systems</span><span class="maintenance-service-price">From K7,500</span></div>
+<div class="maintenance-service-item"><span>Electric Fencing</span><span class="maintenance-service-price">From K450/metre</span></div>
+<div class="maintenance-service-item"><span>Alarm Systems</span><span class="maintenance-service-price">From K5,800</span></div>
+<div class="maintenance-service-item"><span>Access Control</span><span class="maintenance-service-price">From K6,500/point</span></div>
+<div class="maintenance-service-item"><span>Intercom</span><span class="maintenance-service-price">From K3,500/station</span></div>
+<div class="maintenance-service-item"><span>Gate Automation</span><span class="maintenance-service-price">From K10,500</span></div>
+<div class="maintenance-service-item"><span>Security Lighting</span><span class="maintenance-service-price">From K250/point</span></div>
+</div>
+</div>
+<div class="maintenance-subgroup">
+<h5>SOLAR &amp; BACKUP POWER</h5>
+<div class="maintenance-service-grid">
+<div class="maintenance-service-item"><span>Solar Installation</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Inverter Installation</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Battery Systems</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Hybrid / Off-grid Solar</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Backup Power Systems</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Solar Lighting</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Solar Water Pumping</span><span class="maintenance-service-price">Quote after assessment</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="maintenance-level">
+<h4 class="maintenance-level-title">LEVEL 4 — MAJOR / PROJECT WORK</h4>
+<div class="maintenance-service-grid">
+<div class="maintenance-service-item"><span>Major Plumbing Works</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Full House Rewiring</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Major Electrical Upgrades</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Distribution Boards</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Earthing</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Major Carpentry</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Painting Projects</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Tiling Projects</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Major Renovations</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Commercial Refrigeration</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Major Cold-Room Work</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Large Solar Installations</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Large Backup-Power Projects</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Complex Security Installations</span><span class="maintenance-service-price">Quote after assessment</span></div>
+<div class="maintenance-service-item"><span>Major General Repairs</span><span class="maintenance-service-price">Quote after assessment</span></div>
+</div>
+</div>
+</div>
+<p class="maintenance-pricing-note"><strong>PRICING NOTE</strong><br>Prices shown are starting service/labour prices unless otherwise stated. Materials, replacement parts and specialised equipment may be charged separately where applicable. Final pricing for larger or specialised works will be confirmed after assessment and customer approval before work begins.</p>
+</div>
+<div class="price-category">
+<h3>Elkhoi Property Management</h3>
+<p class="category-intro">Property care and oversight for owners who need their properties checked, maintained and kept in good condition.</p>
+<table class="price-table">
+<tr><th>Service</th><th>Starting price</th></tr>
+<tr><td>Property Inspection</td><td class="price-value">From K500/visit</td></tr>
+<tr><td>Routine Property Check</td><td class="price-value">From K500/visit</td></tr>
+<tr><td>Move-in Inspection</td><td class="price-value">From K500</td></tr>
+<tr><td>Move-out Inspection</td><td class="price-value">From K500</td></tr>
+<tr><td>Vacant Property Check</td><td class="price-value">From K500/visit</td></tr>
+<tr><td>Property Upkeep Visit</td><td class="price-value">From K500/visit</td></tr>
+<tr><td>Maintenance Coordination</td><td class="price-value">From K300/request</td></tr>
+<tr><td>Property Care Package</td><td class="price-value">From K750/month</td></tr>
+</table>
+<p class="price-note">Recurring or more complex property-care arrangements depend on property size, location, frequency of visits, scope of work, number of properties and maintenance requirements.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="transport-section">
+<div class="wrap narrow-wrap">
+<div class="section-head">
+<p class="eyebrow">Transport</p>
+<h2>Transport / Mileage Recovery</h2>
+<p>Transport is calculated from Kamwala and shown as an additional charge on top of the service price, where applicable.</p>
+</div>
+<div class="price-category">
+<table class="price-table">
+<tr><th>Distance</th><th>Price (ZMW)</th></tr>
+<tr><td>0–5 km</td><td class="price-value">K100 return</td></tr>
+<tr><td>6–10 km</td><td class="price-value">K150 return</td></tr>
+<tr><td>11–20 km</td><td class="price-value">K230 return</td></tr>
+<tr><td>20+ km</td><td class="price-value">K350–K450</td></tr>
+</table>
+<p class="price-note">Transport figures are estimates and are presented as an additional charge where applicable. Laundry pickup and delivery remains dependent on service area, distance, order size and location.</p>
+</div>
+</div>
+</section>
+<section class="condition-section">
+<div class="wrap narrow-wrap">
+<div class="section-head">
+<p class="eyebrow">Adjustments</p>
+<h2>Cleaning Condition Guide</h2>
+<p>This guide applies to <strong>cleaning services</strong> and helps estimate the level of cleaning your property may require.</p>
+</div>
+<div class="multiplier-grid">
+<div class="multiplier-card"><div class="mult">1.0x</div><div class="label">Light</div><div class="sub">Well-maintained</div></div>
+<div class="multiplier-card"><div class="mult">1.2x</div><div class="label">Moderate</div><div class="sub">Average dirt</div></div>
+<div class="multiplier-card"><div class="mult">1.4x</div><div class="label">Heavy</div><div class="sub">Neglected</div></div>
+<div class="multiplier-card"><div class="mult">1.6x</div><div class="label">Very Heavy / Post-Construction</div><div class="sub">Extensive dirt or debris</div></div>
+</div>
+<p class="price-note" style="margin-top:16px;">This guide is for estimation purposes only. Final cleaning price is confirmed after the actual scope and condition are understood. It is not an automatic pricing formula.</p>
+<div class="factors-note">
+<h4>Starting From (Estimate Only — Final Quote After Confirmation)</h4>
+<p>This is a starting estimate based on the details you provide. Final pricing is confirmed after we review the workload, transport, labour requirement and job intensity — before any work begins. No surprises.</p>
+<ul>
+<li><strong>Property size</strong> — rooms, square footage, number of items</li>
+<li><strong>Condition &amp; workload</strong> — dirt level, damage, debris</li>
+<li><strong>Location &amp; transport</strong> — return trip from our base in Kamwala</li>
+<li><strong>Labour &amp; materials</strong> — team size, chemicals, equipment</li>
+<li><strong>Special requirements</strong> — windows, carpets, extra items</li>
+</ul>
+<p class="factors-cta">Get in touch for a free, no-obligation quote to get your exact price.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="section-head">
+<p class="eyebrow">How It Works</p>
+<h2>Simple from request to payment</h2>
+</div>
+<div class="steps-grid">
+<div class="step"><div class="step-num">1</div><h3>Request</h3><p>Tell us what service you need and where it is needed.</p></div>
+<div class="step"><div class="step-num">2</div><h3>Confirm</h3><p>We contact you to confirm the details, availability and final price.</p></div>
+<div class="step"><div class="step-num">3</div><h3>Service</h3><p>We arrange and deliver the agreed service.</p></div>
+<div class="step"><div class="step-num">4</div><h3>Payment</h3><p>Payment is made for the confirmed service.</p></div>
+</div>
+</div>
+</section>
+<section class="quote-section" style="text-align:center;">
+<div class="wrap">
+<h2 style="color:var(--white);">Need a price for your job?</h2>
+<p style="color:rgba(255,255,255,0.75); max-width:520px; margin:16px auto 28px;">Request a service or contact us for a quote based on your actual requirements.</p>
+<div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+<a class="btn btn-primary" href="get-quote.html">Request a Service</a>
+<a class="btn" href="https://wa.me/message/NRMCE6TWNKXDH1" rel="noopener" style="background:var(--white); color:var(--navy);" target="_blank">WhatsApp Us</a>
+</div>
+</div>
+</section>
+<footer>
+<div class="wrap">
+<p>© 2026 Elkhoi Home &amp; Property Services. All rights reserved. Elkhoi Home &amp; Property Services is the trading name of Elkhoi Services.</p>
+</div>
+</footer>
+</body>
+</html>
+
+<style id="elkhoi-maintenance-spacing-fix">
+/* Maintenance pricing spacing: keep each technical subgroup readable without changing the overall design. */
+.maintenance-subgroup .maintenance-service-grid{
+  grid-template-columns:1fr !important;
+  gap:0 !important;
+}
+.maintenance-subgroup .maintenance-service-item{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) auto !important;
+  column-gap:28px !important;
+  align-items:baseline !important;
+  min-height:54px;
+  padding:11px 0 !important;
+}
+.maintenance-subgroup .maintenance-service-price{
+  white-space:nowrap !important;
+  text-align:right !important;
+}
+@media(max-width:760px){
+  .maintenance-subgroup .maintenance-service-item{
+    grid-template-columns:minmax(0,1fr) auto !important;
+    column-gap:18px !important;
+  }
+}
+</style>

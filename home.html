@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home — Elkhoi Home & Property Services</title>
+<meta name="description" content="Elkhoi Home & Property Services — cleaning, maintenance, laundry and property management in Lusaka, Zambia.">
+<link rel="icon" type="image/png" href="elkhoi-logo.png">
+
+<!--
+  ============================================================
+  ELKHOI HOME PAGE (part of the Pricing Website mini-site)
+  ============================================================
+  This is the Home page for the standalone Pricing Website
+  (home.html / services.html / pricing.html / get-quote.html /
+  contact.html) — fully separate from the main Elkhoi site (Index).
+
+  Structure inspired by WeWash's homepage, adapted honestly for
+  Elkhoi:
+  1. Hero
+  2. Services teaser (4 cards linking to services.html)
+  3. "Why Our Price Isn't a Guess" — Elkhoi's real 4-step process
+     (request → confirm → service → payment), NOT WeWash's separate 2-visit assessment model
+  4. Trust points — grounded in what's actually true about Elkhoi
+     right now; no unconfirmed claims (e.g. no "insured" claim
+     since that hasn't been confirmed)
+  5. Who We Serve — Homes / Offices / Property Owners
+  6. Serving Lusaka — hours, phone, WhatsApp, email. No fake office
+     address, since Elkhoi doesn't have a public office to list.
+
+  No unsupported statistics, testimonials, qualifications or business claims are included.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#0D2A47;
+    --navy-deep:#081A2E;
+    --teal:#F4791E;
+    --teal-deep:#D9650E;
+    --white:#FFFFFF;
+    --grey-light:#F4F6F7;
+    --grey-border:#E3E7E9;
+    --ink:#1D2528;
+    --ink-soft:#5C6A70;
+    --font-heading:'Sora', sans-serif;
+    --font-body:'Inter', sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--font-body); color:var(--ink); background:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased;}
+  img{max-width:100%; display:block;}
+  h1,h2,h3{font-family:var(--font-heading); color:var(--navy); font-weight:700; line-height:1.2;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1140px; margin:0 auto; padding:0 24px;}
+  section{padding:70px 0;}
+  .eyebrow{font-family:var(--font-heading); font-size:0.83rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--teal-deep); margin-bottom:14px;}
+  .section-head{max-width:640px; margin:0 auto 40px; text-align:center;}
+  .section-head h2{font-size:clamp(1.65rem,3.2vw,2.25rem); margin-bottom:12px;}
+  .section-head p{color:var(--ink-soft); font-size:1.07rem;}
+  .btn{display:inline-block; font-family:var(--font-heading); font-weight:600; font-size:1rem; padding:14px 28px; border-radius:6px; transition:background .18s, transform .18s;}
+  .btn-primary{background:var(--teal); color:var(--white);}
+  .btn-primary:hover{background:var(--teal-deep); transform:translateY(-1px);}
+  .btn-outline-navy{border:2px solid var(--navy); color:var(--navy); background:none;}
+  .btn-outline-navy:hover{background:var(--navy); color:var(--white);}
+
+  /* ============ HOME (self-contained, matches Index) ============ */
+  .home-hero{background:var(--navy); padding:70px 0; text-align:center;}
+  .home-hero h1{font-size:clamp(2.15rem,5vw,3.45rem); margin-bottom:14px; color:var(--white);}
+  .home-hero h1 .accent{color:var(--teal);}
+  .home-hero .home-tagline{font-family:var(--font-heading); font-weight:600; font-size:1.2rem; color:var(--teal); margin-bottom:28px;}
+  .home-hero-ctas{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+  .home-hero .btn-outline-white{border:2px solid var(--white); color:var(--white); background:none;}
+  .home-hero .btn-outline-white:hover{background:var(--white); color:var(--navy);}
+
+  /* ============ SERVICES (self-contained, matches Index) ============ */
+  .services-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;
+  }
+  .service-card{
+    background:var(--navy); border:1px solid var(--navy); border-radius:12px;
+    padding:32px 28px; transition:box-shadow .2s, transform .2s, border-color .2s;
+    display:flex; flex-direction:column;
+  }
+  .service-card:hover{box-shadow:0 12px 32px rgba(13,42,71,0.25); transform:translateY(-3px); border-color:var(--teal);}
+  .service-icon{
+    width:80px; height:80px; border-radius:18px;
+    background:var(--grey-light); border:1px solid var(--grey-border);
+    display:flex; align-items:center; justify-content:center; margin-bottom:22px;
+    padding:12px;
+  }
+  .service-icon img{width:100%; height:100%; object-fit:contain;}
+  .service-card h3{font-size:1.2rem; margin-bottom:8px; color:var(--white);}
+  .service-card .service-desc{color:rgba(255,255,255,0.75); font-size:0.99rem; margin-bottom:18px;}
+  .service-list{
+    list-style:none; margin-bottom:22px; flex-grow:1;
+  }
+  .service-list li{
+    display:flex; align-items:flex-start; gap:8px;
+    font-size:0.94rem; color:rgba(255,255,255,0.9); padding:5px 0;
+  }
+  .service-list li::before{
+    content:""; width:6px; height:6px; border-radius:50%; background:var(--teal);
+    margin-top:8px; flex-shrink:0;
+  }
+  .service-list-2col{
+    display:grid; grid-template-columns:1fr 1fr; column-gap:12px; row-gap:0;
+  }
+  .service-card .btn-outline-navy{border-color:var(--white); color:var(--white);}
+  .service-card .btn-outline-navy:hover{background:var(--white); color:var(--navy);}
+  .service-card .btn{font-size:0.9rem; padding:10px 18px; align-self:flex-start;}
+
+  .btn-whatsapp{background:#25D366; color:var(--white); display:inline-flex; align-items:center; gap:9px;}
+  .btn-whatsapp:hover{background:#1FA855; transform:translateY(-1px);}
+  .btn-whatsapp svg{width:18px; height:18px; fill:currentColor;}
+
+  /* Header */
+  header{position:sticky; top:0; z-index:100; background:var(--white); border-bottom:1px solid var(--grey-border);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:1140px; margin:0 auto;}
+  .nav-logo-img{height:42px; width:auto;}
+  .nav-links{display:flex; align-items:center; gap:32px; list-style:none;}
+  .nav-links a{color:var(--ink); font-weight:500; font-size:1rem;}
+  .nav-links a:hover{color:var(--teal-deep);}
+  .nav-links a.active{color:var(--teal-deep); font-weight:600;}
+
+  /* Hero / disclaimer band */
+  .pricing-hero{background:var(--navy); padding:60px 0 40px; text-align:center;}
+  .pricing-hero h1{font-size:clamp(2.05rem,4.5vw,3.05rem); margin-bottom:14px; color:var(--white);}
+  .pricing-hero h1 .accent{color:var(--teal);}
+  .pricing-hero > .wrap > p{color:rgba(255,255,255,0.78) !important;}
+  .disclaimer-note{
+    max-width:620px; margin:20px auto 0; background:var(--white);
+    border:1px solid var(--grey-border); border-radius:10px; padding:16px 20px;
+    font-size:0.97rem; color:var(--ink-soft);
+  }
+  .disclaimer-note strong{color:var(--navy);}
+
+  /* How it works */
+  .steps-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:32px;}
+  .step{text-align:center;}
+  .step-num{width:44px; height:44px; border-radius:50%; background:var(--navy); color:var(--white); font-family:var(--font-heading); font-weight:700; font-size:1.1rem; display:flex; align-items:center; justify-content:center; margin:0 auto 18px;}
+  .step h3{font-size:1.1rem; margin-bottom:8px;}
+  .step p{color:var(--ink-soft); font-size:0.97rem;}
+
+  /* Price tables */
+  .price-section-dark{background:var(--navy);}
+  .price-section-dark .section-head h2{color:var(--white);}
+  .price-section-dark .section-head p{color:rgba(255,255,255,0.75);}
+  .price-category{margin-bottom:28px; background:var(--white); border-radius:12px; padding:28px; box-shadow:0 10px 30px rgba(0,0,0,0.18);}
+  .price-category h3{font-size:1.3rem; margin-bottom:16px; padding-bottom:10px; border-bottom:2px solid var(--teal);}
+  table.price-table{width:100%; border-collapse:collapse; font-size:1rem;}
+  table.price-table th{
+    background:var(--navy); color:var(--white); text-align:left;
+    padding:12px 16px; font-family:var(--font-heading); font-weight:600; font-size:0.9rem;
+  }
+  table.price-table th:last-child, table.price-table td:last-child{text-align:right;}
+  table.price-table td{padding:12px 16px; border-bottom:1px solid var(--grey-border);}
+  table.price-table tr:nth-child(even){background:var(--grey-light);}
+  .price-value{color:var(--teal-deep); font-weight:600;}
+
+  /* Condition multipliers */
+  .multiplier-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:16px;}
+  .multiplier-card{
+    background:var(--grey-light); border:1px solid var(--grey-border); border-radius:10px;
+    padding:20px; text-align:center;
+  }
+  .multiplier-card .mult{font-family:var(--font-heading); font-weight:700; font-size:1.65rem; color:var(--teal-deep);}
+  .multiplier-card .label{font-weight:600; font-size:0.97rem; margin:6px 0 2px;}
+  .multiplier-card .sub{font-size:0.87rem; color:var(--ink-soft);}
+
+  /* Extra factors note */
+  .factors-note{
+    background:#FFF8F0; border:1px solid #F4D9BC; border-radius:10px; padding:22px 24px; margin-top:32px;
+  }
+  .factors-note h4{font-family:var(--font-heading); font-weight:700; font-size:1.05rem; color:var(--navy); margin-bottom:10px;}
+  .factors-note ul{margin:0; padding-left:20px; color:var(--ink-soft); font-size:0.97rem;}
+  .factors-note li{margin-bottom:4px;}
+
+  /* CTA band */
+  .cta-band{background:var(--navy); color:var(--white); text-align:center;}
+  .cta-band h2{color:var(--white);}
+  .cta-band p{color:rgba(255,255,255,0.75); max-width:520px; margin:0 auto 28px;}
+  .cta-row{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+
+  /* Get a Quote section (matches WeWash's Contact page layout) */
+  .quote-section{background:var(--navy);}
+  .quote-section .section-head{text-align:left; margin:0 0 36px; max-width:none;}
+  .quote-section .eyebrow{color:var(--teal);}
+  .quote-section h2{color:var(--white);}
+  .quote-section > .wrap > p{color:rgba(255,255,255,0.7); max-width:560px; margin-top:-24px; margin-bottom:36px;}
+  .quote-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:48px;}
+  .quote-form{background:var(--white); border-radius:12px; padding:32px;}
+  .quote-form h3{font-size:1.25rem; margin-bottom:20px;}
+  .quote-form .form-group{margin-bottom:16px; display:flex; flex-direction:column; gap:6px;}
+  .quote-form label{font-size:0.9rem; font-weight:500; color:var(--ink-soft);}
+  .quote-form input, .quote-form textarea, .quote-form select{
+    padding:12px 14px; border:1px solid var(--grey-border); border-radius:6px;
+    font-family:var(--font-body); font-size:1rem; color:var(--ink);
+  }
+  .quote-form textarea{resize:vertical; min-height:100px;}
+  .quote-form .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .quote-info h3{color:var(--white); font-size:1.25rem; margin-bottom:20px;}
+  .quote-info-card{
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12);
+    border-radius:10px; padding:16px 18px; margin-bottom:14px;
+    display:flex; align-items:flex-start; gap:14px;
+  }
+  .quote-info-card .icon{
+    width:38px; height:38px; border-radius:8px; background:var(--teal);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .quote-info-card .icon svg{width:19px; height:19px; fill:var(--white);}
+  .quote-info-card .label{font-size:0.83rem; color:rgba(255,255,255,0.55); margin-bottom:2px;}
+  .quote-info-card .value{color:var(--white); font-weight:600; font-size:1rem;}
+  .quote-info-card a.value{text-decoration:none;}
+
+  @media (max-width:800px){
+    .quote-grid{grid-template-columns:1fr;}
+    .quote-form .form-row{grid-template-columns:1fr;}
+  }
+
+  /* Footer (matches main site) */
+  footer{background:var(--navy-deep); color:rgba(255,255,255,0.8); padding:40px 0 24px; text-align:center; font-size:0.9rem;}
+  footer a{color:rgba(255,255,255,0.8);}
+  footer a:hover{color:var(--teal);}
+
+  @media (max-width:640px){
+    table.price-table{font-size:0.9rem;}
+    table.price-table th, table.price-table td{padding:10px 10px;}
+    .nav-links{display:none;}
+  }
+
+  /* ============ HOME PAGE EXTRAS (inspired by WeWash's structure) ============ */
+  .teaser-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px;}
+  .teaser-card{
+    position:relative; border-radius:12px; overflow:hidden; aspect-ratio:4/3;
+    box-shadow:0 8px 24px rgba(13,42,71,0.12);
+  }
+  .teaser-card img{width:100%; height:100%; object-fit:cover; display:block;}
+  .teaser-overlay{
+    position:absolute; inset:0;
+    background:linear-gradient(0deg, rgba(13,42,71,0.9) 0%, rgba(13,42,71,0.05) 60%);
+    display:flex; flex-direction:column; justify-content:flex-end; padding:20px;
+  }
+  .teaser-overlay h3{color:var(--white); font-size:1.15rem; margin-bottom:4px;}
+  .teaser-overlay p{color:rgba(255,255,255,0.8); font-size:0.9rem;}
+  .teaser-see-all{text-align:center; margin-top:32px;}
+
+  .trust-grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px;}
+  .trust-card{padding:22px; border:1px solid var(--grey-border); border-radius:10px;}
+  .trust-card h3{font-size:1.05rem; margin-bottom:8px;}
+  .trust-card p{color:var(--ink-soft); font-size:0.95rem;}
+
+  .serve-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;}
+  .serve-card{
+    background:var(--grey-light); border:1px solid var(--grey-border); border-radius:10px;
+    padding:26px; text-align:center;
+  }
+  .serve-card h3{font-size:1.15rem; margin-bottom:8px;}
+  .serve-card p{color:var(--ink-soft); font-size:0.95rem;}
+
+  .location-section{background:var(--grey-light);}
+  .location-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start;}
+  .location-item{display:flex; gap:14px; margin-bottom:24px;}
+  .location-item .icon{
+    width:38px; height:38px; border-radius:8px; background:var(--navy); flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .location-item .icon svg{width:19px; height:19px; fill:var(--white);}
+  .location-item h4{font-size:1rem; margin-bottom:4px;}
+  .location-item p{color:var(--ink-soft); font-size:0.95rem;}
+  .location-cta{
+    background:var(--white); border:1px solid var(--grey-border); border-radius:14px;
+    padding:32px; text-align:center;
+  }
+  .location-cta h2{font-size:1.65rem; margin-bottom:10px;}
+  .location-cta h2 .accent{color:var(--teal);}
+  .location-cta p{color:var(--ink-soft); margin-bottom:22px;}
+  @media (max-width:800px){
+    .location-grid{grid-template-columns:1fr;}
+  }
+
+/* CLASSIC ELKHOI VISUAL REFRESH */
+:root{--navy:#123B5D;--navy-deep:#08243B;--teal:#E87822;--teal-deep:#C95D0E;--cream:#FBF8F3;--sage:#EAF1EE;--gold:#C79A52;}
+body{background:var(--cream)!important;}
+header{background:rgba(255,255,255,.98)!important;border-bottom:1px solid #E7E0D6!important;box-shadow:0 4px 18px rgba(8,36,59,.06);}
+.home-hero{background:linear-gradient(120deg,rgba(8,36,59,.96),rgba(18,59,93,.88)),url('hero-bg.jpg') center/cover!important;position:relative;}
+.home-hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,var(--teal),var(--gold),var(--teal));}
+section{border-top:1px solid rgba(18,59,93,.06);}
+.eyebrow{color:var(--teal)!important;letter-spacing:.16em;}
+footer{background:#061A2A!important;}
+</style>
+
+<style id="elkhoi-typography-normalization">
+/* Elkhoi typography normalization: keeps the existing visual hierarchy while making equivalent text consistent. */
+html { font-size: 16px; }
+body { font-size: 1.05rem; }
+.nav-links a { font-size: 1rem !important; }
+.section-head p { font-size: 1.05rem !important; }
+.step p, .why-item p, .why-card p, .business p { font-size: 1rem !important; }
+.service-card p { font-size: 1rem !important; }
+.form-group label, .quote-form label, label { font-size: 0.9rem !important; }
+.form-group input, .form-group select, .form-group textarea, .quote-form input, .quote-form select, .quote-form textarea { font-size: 1rem !important; }
+footer { font-size: 0.9rem !important; }
+@media (max-width: 640px) {
+  html { font-size: 16px; }
+  .section-head p { font-size: 1.05rem !important; }
+  .step p, .why-item p, .why-card p, .business p, .service-card p { font-size: 1rem !important; }
+}
+</style>
+
+<style id="elkhoi-mobile-uniform-typography">
+@media (max-width: 640px) {
+  html { font-size: 16px !important; }
+  body,
+  body p,
+  body li,
+  body td,
+  body th,
+  body label,
+  body input,
+  body textarea,
+  body select,
+  body button,
+  body .form-group,
+  body .form-note,
+  body .note,
+  body .small,
+  body .description,
+  body .card-text,
+  body .service-description,
+  body .service-card p,
+  body .contact-info p,
+  body .policy-content p,
+  body .policy-content li {
+    font-size: 0.9rem !important;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="home.html">
+      <img src="elkhoi-logo.png" alt="Elkhoi Home & Property Services" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="laundry.html">Laundry</a></li><li><a href="pricing.html">Pricing</a></li>
+      
+      <li><a href="get-quote.html">Get Quote</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="get-quote.html" class="btn btn-primary">Get Quote</a>
+  </div>
+</header>
+
+<!-- ============ HOME SECTION (self-contained — does not link to Index) ============ -->
+
+<section class="home-hero" id="home">
+  <div class="wrap">
+    <h1>Elkhoi <span class="accent">Home &amp; Property Services</span></h1>
+    <p class="home-tagline">Your Property. Our Priority.</p>
+    <div class="home-hero-ctas">
+      <a href="get-quote.html" class="btn btn-primary">Request a Service</a>
+      <a href="https://wa.me/message/NRMCE6TWNKXDH1" target="_blank" rel="noopener" class="btn btn-outline-white">WhatsApp Us</a>
+    </div>
+    <p style="margin:18px auto 0; color:rgba(255,255,255,.72); font-size:0.95rem;">Request a Service &nbsp;•&nbsp; Confirm &nbsp;•&nbsp; Service &nbsp;•&nbsp; Payment</p>
+  </div>
+</section>
+
+<!-- ============ SERVICES TEASER (mirrors WeWash's "services, one team" section) ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head" style="text-align:left; max-width:none; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+      <div>
+        <p class="eyebrow">What We Do</p>
+        <h2 style="margin-bottom:6px;">Four Services. One Company to Call</h2>
+        <p style="margin:0;">Cleaning and Laundry are our current launch focus. Maintenance and Property Management remain part of the wider Elkhoi service offering.</p>
+      </div>
+      <a href="services.html" class="btn btn-outline-navy">See All Services</a>
+    </div>
+    <div class="teaser-grid">
+      <a href="services.html" class="teaser-card">
+        <img src="work-cleaning.jpg" alt="Elkhoi Cleaning">
+        <div class="teaser-overlay">
+          <h3>Elkhoi Cleaning</h3>
+          <p>From K550</p>
+        </div>
+      </a>
+      <a href="services.html" class="teaser-card">
+        <img src="work-maintenance.jpg" alt="Elkhoi Maintenance">
+        <div class="teaser-overlay">
+          <h3>Elkhoi Maintenance</h3>
+          <p>Callout &amp; assessment</p>
+        </div>
+      </a>
+      <a href="laundry.html" class="teaser-card">
+        <img src="work-laundry.jpg" alt="Elkhoi Laundry">
+        <div class="teaser-overlay">
+          <h3>Elkhoi Laundry</h3>
+          <p>From K30/kg · View Laundry Services</p>
+        </div>
+      </a>
+      <a href="services.html" class="teaser-card">
+        <img src="work-property.jpg" alt="Elkhoi Property Management">
+        <div class="teaser-overlay">
+          <h3>Property Management</h3>
+          <p>Inspections &amp; upkeep</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY OUR PRICE IS CLEAR (adapted from WeWash's "never a guess" section) ============ -->
+<section style="background:var(--grey-light);">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How Pricing Works</p>
+      <h2>Why Our Price Isn't a Guess</h2>
+      <p>A one-bedroom flat and a four-bedroom house after builders leave aren't the same job — so we don't price them the same.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Tell Us What You Need</h3>
+        <p>A message on WhatsApp or the quote form is enough — rooms, size, condition.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Get a Starting Price</h3>
+        <p>Based on what you've told us — before we arrive.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>We Confirm The Details</h3>
+        <p>We confirm the scope, availability and any details that affect the final price.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>You Approve, We Get Started</h3>
+        <p>If anything changes, we confirm the adjusted price before the agreed work begins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST POINTS (adapted from WeWash's "boring things done right") ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Why People Choose Elkhoi</p>
+      <h2>The Simple Things, Done Right</h2>
+    </div>
+    <div class="trust-grid2">
+      <div class="trust-card">
+        <h3>One Company, Four Services</h3>
+        <p>Cleaning, maintenance, laundry and property management — coordinated through one company.</p>
+      </div>
+      <div class="trust-card">
+        <h3>Clear Pricing</h3>
+        <p>Starting prices are shown upfront, with the final price confirmed after the actual job requirements are understood.</p>
+      </div>
+      <div class="trust-card">
+        <h3>Lusaka-Based Service</h3>
+        <p>Based locally and familiar with the areas we serve.</p>
+      </div>
+      <div class="trust-card">
+        <h3>Simple WhatsApp Booking</h3>
+        <p>Message us directly — no app to download, no account to create.</p>
+      </div>
+      <div class="trust-card">
+        <h3>Simple Process</h3>
+        <p>Request a service, confirm the details and price, receive the service, then make payment.</p>
+      </div>
+      <div class="trust-card">
+        <h3>Growing Carefully</h3>
+        <p>We are building our services step by step, starting with Lusaka.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHO WE SERVE (adapted from WeWash's "who we work for") ============ -->
+<section style="background:var(--grey-light);">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Who We Serve</p>
+      <h2>Built For Homes, Offices and Property Owners</h2>
+    </div>
+    <div class="serve-grid">
+      <div class="serve-card">
+        <h3>Homes</h3>
+        <p>Flats, houses and move-in/move-out cleans. Book a one-off or keep us coming back weekly, biweekly or monthly.</p>
+      </div>
+      <div class="serve-card">
+        <h3>Offices &amp; Businesses</h3>
+        <p>Office cleaning, business laundry and maintenance support based on your requirements.</p>
+      </div>
+      <div class="serve-card">
+        <h3>Property Owners</h3>
+        <p>Inspections, maintenance coordination and upkeep for properties you are not always able to check yourself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVING LUSAKA (adapted from WeWash's location/hours section — no
+     fake office address, since Elkhoi doesn't have a public office to list) ============ -->
+<section class="location-section">
+  <div class="wrap">
+    <div class="location-grid">
+      <div>
+        <p class="eyebrow">Find Us In Lusaka</p>
+        <h2 style="margin-bottom:16px;">Serving Lusaka, Zambia</h2>
+        <p style="color:var(--ink-soft); margin-bottom:28px;">We currently serve Lusaka. Any applicable pickup, delivery or transport charge depends on the service area, distance, order size and location.</p>
+
+        <div class="location-item">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6 4.2 2.5-.8 1.3-5-3V6.5h1.6v6.1z"/></svg></span>
+          <div>
+            <h4>Operating Hours</h4>
+            <p>Monday – Saturday: 08:30 – 18:30</p>
+          </div>
+        </div>
+        <div class="location-item">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg></span>
+          <div>
+            <h4>Phone &amp; WhatsApp</h4>
+            <p>+260 572 313 595</p>
+          </div>
+        </div>
+        <div class="location-item">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm2 0l8 6 8-6H4zm16 2.2-8 6-8-6V18h16V8.2z"/></svg></span>
+          <div>
+            <h4>Email</h4>
+            <p>elkhoizm@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="location-cta">
+        <p class="eyebrow" style="text-align:center;">Get A Price</p>
+        <h2>Tell us about the space. <span class="accent">We'll tell you the price.</span></h2>
+        <p>It takes about a minute. We confirm the final quote on-site — no surprises after.</p>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <a href="get-quote.html" class="btn btn-primary">Request a Quote</a>
+          <a href="https://wa.me/message/NRMCE6TWNKXDH1" target="_blank" rel="noopener" class="btn btn-whatsapp" style="justify-content:center;">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4C8.6 21.5 10.3 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.7-2.8-1.1-4.6-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.8.9 2.1 1 .3.2.5.2.6.4.1.1.1.7-.1 1.3z"/></svg>
+            Message Us on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Elkhoi Home &amp; Property Services. All rights reserved. Elkhoi Home &amp; Property Services is the trading name of Elkhoi Services.</p>
+  </div>
+</footer>
+
+</body>
+</html>
